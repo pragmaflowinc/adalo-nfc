@@ -1,0 +1,59 @@
+{
+  "displayName": "nfc",
+  "defaultWidth": 160,
+  "defaultHeight": 24,
+  "components": "./index.js",
+  "icon": "./example-thumbnail.png",
+  "props": [
+    {
+      "name": "title",
+      "displayName": "Label for the button",
+      "type": "text",
+      "default": "Read NFC Tag",
+      "styles": {
+        "fontFamily": "@body",
+        "color": "#757575",
+        "fontWeight": "normal"
+      }
+    },
+    {
+      "name": "icon",
+      "displayName": "Icon",
+      "type": "icon",
+      "default": "add"
+    },
+    {
+      "name": "backgroundColor",
+      "displayName": "Background Color",
+      "type": "color",
+      "default": "@primary"
+    },
+    {
+      "name": "onEnabledCheck",
+      "displayName": "Indicates if NFC is turned on",
+      "type": "action",
+      "arguments": [
+        {
+          "type": "boolean",
+          "displayName": "Is NFC Enabled"
+        }
+      ]
+    },
+    {
+      "name": "onReadRequest",
+      "displayName": "Fired when the user wants to read an NFC tag",
+      "type": "action"
+    },
+    {
+      "name": "onTagRead",
+      "displayName": "Returns the ID of a tag when it is read",
+      "type": "action",
+      "arguments": [
+        {
+          "type": "text",
+          "displayName": "Tag ID"
+        }
+      ]
+    }
+  ]
+}
